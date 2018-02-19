@@ -9,13 +9,16 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "dev": "npm run build-css:watch & npm start",
+    "build": "npm run build-css && react-scripts build",
+    "build-css": "stylus ./src/ -o ./src/index.css",
+    "build-css:watch": "stylus -w ./src/ -o ./src/index.css",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
     "prepush": "cross-env CI=true npm test",
-    "flow": "./node_modules/.bin/flow"
+    "flow": "flow"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.3.12",
@@ -30,6 +33,7 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "flow-bin": "^0.65.0",
     "jest-enzyme": "^4.2.0",
-    "react-test-renderer": "^16.2.0"
+    "react-test-renderer": "^16.2.0",
+    "stylus": "^0.54.5"
   }
 }

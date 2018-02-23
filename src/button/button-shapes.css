@@ -1,0 +1,93 @@
+.button_shape_rounded{
+  border-radius: 7px;
+}
+
+.button_shape_square{
+  border-radius: 0;
+  width: 60px;
+  height: 60px;
+}
+.button_shape_circle{
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+.button_size_40.button_shape_circle,
+.button_size_40.button_shape_square{
+  width: 40px;
+  height: 40px;
+}
+.button_size_60.button_shape_circle,
+.button_size_60.button_shape_square{
+  width: 60px;
+  height: 60px;
+}
+.button_size_80.button_shape_circle,
+.button_size_80.button_shape_square{
+  width: 80px;
+  height: 80px;
+}
+.button_size_100.button_shape_circle,
+.button_size_100.button_shape_square{
+  width: 100px;
+  height: 100px;
+}
+.button_size_120.button_shape_circle,
+.button_size_120.button_shape_square{
+  width: 120px;
+  height: 120px;
+}
+.button_size_140.button_shape_circle,
+.button_size_140.button_shape_square{
+  width: 140px;
+  height: 140px;
+}
+.button_size_160.button_shape_circle,
+.button_size_160.button_shape_square{
+  width: 160px;
+  height: 160px;
+}
+.button_size_auto.button_shape_circle,
+.button_size_auto.button_shape_square{
+  width: auto;
+}
+.button_size_auto.button_shape_circle:before,
+.button_size_auto.button_shape_square:before{
+  content: "";
+  display: block;
+  padding-top: 50%;
+}
+.button_size_auto.button_shape_circle:after,
+.button_size_auto.button_shape_square:after{
+  content: "";
+  display: block;
+  padding-top: 50%;
+}
+
+.button_shape_pill{
+  border-radius: 15px;
+}
+.button_size_60.button_shape_pill{
+  border-radius: 10px;
+}
+.button_size_80.button_shape_pill{
+  border-radius: 12.5px;
+}
+.button_size_100.button_shape_pill{
+  border-radius: 15px;
+}
+.button_size_120.button_shape_pill{
+  border-radius: 17.5px;
+}
+.button_size_140.button_shape_pill{
+  border-radius: 20px;
+}
+.button_size_160.button_shape_pill{
+  border-radius: 22.5px;
+}
+.button_size_full.button_shape_pill{
+  border-radius: 200px;
+}
+.button_size_auto.button_shape_pill{
+  border-radius: 200px;
+}

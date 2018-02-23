@@ -1,0 +1,27 @@
+.button_transparent,
+[class*="button_color_"].button_transparent{
+  background-color: transparent;
+}
+
+.button_transparent:hover{
+  text-decoration: underline;
+}
+
+.button_color_green.button_transparent{
+  color: var(--color_green);
+}
+.button_color_blue.button_transparent{
+  color: var(--color_blue);
+}
+.button_color_red.button_transparent{
+  color: var(--color_red);
+}
+.button_color_black.button_transparent{
+  color: var(--color_black);
+}
+.button_color_purple.button_transparent{
+  color: var(--color_purple);
+}
+.button_color_orange.button_transparent{
+  color: var(--color_orange);
+}

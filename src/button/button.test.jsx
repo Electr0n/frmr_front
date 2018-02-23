@@ -53,12 +53,12 @@ describe('Button', () => {
     });
 
     it('should return \'button button_transparent\' if transparent=true', () => {
-      component = shallow(<Button transparent={true}/>).instance();
+      component = shallow(<Button isTransparent={true}/>).instance();
       expect(component.className()).toEqual('button button_transparent');
     });
 
     it('should not return \'button button_transparent\' if transparent=false', () => {
-      component = shallow(<Button transparent={false}/>).instance();
+      component = shallow(<Button isTransparent={false}/>).instance();
       expect(component.className()).toEqual('button');
     });
 

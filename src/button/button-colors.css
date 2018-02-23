@@ -1,0 +1,42 @@
+.button_color_green{
+  background-color: var(--color_green);
+}
+.button_color_blue{
+  background-color: var(--color_blue);
+}
+.button_color_red{
+  background-color: var(--color_red);
+}
+.button_color_black{
+  background-color: var(--color_black);
+}
+.button_color_purple{
+  background-color: var(--color_purple);
+}
+.button_color_orange{
+  background-color: var(--color_orange);
+}
+[class*="button_color_"]{
+  color: white;
+}
+.button_color_green:active{
+  background-color: var(--color_green_active);
+}
+.button_color_blue:active{
+  background-color: var(--color_blue_active);
+}
+.button_color_red:active{
+  background-color: var(--color_red_active);
+}
+.button_color_black:active{
+  background-color: var(--color_black_active);
+}
+.button_color_purple:active{
+  background-color: var(--color_purple_active);
+}
+.button_color_orange:active{
+  background-color: var(--color_orange_active);
+}
+[class*="button_color_"]:active{
+  transition: none;
+}

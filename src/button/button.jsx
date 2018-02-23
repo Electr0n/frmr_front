@@ -1,18 +1,23 @@
 // @flow
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import './button.css';
+import './button-sizes.css';
+import './button-shapes.css';
+import './button-colors.css';
+import './button-bordered.css';
+import './button-transparent.css';
+import './button-statuses.css';
 
 type Props = {
-  color?:         string,
+  color?:         'red' | 'green' | 'blue' | 'purple' | 'orange' | 'black',
   label?:         string,
-  size?:          20 | 40 | 60 | 80 | 100,
-  shape?:         'circle' | 'square' | 'rounded' | 'pentagon' | 'hexagon',
-  status?:        'active' | 'disabled' | 'loading' | 'pressed' | 'unclickable',
+  size?:          '40' | '60' |'80' | '100' | '120' | '140' | '160' | 'full' | 'auto',
+  shape?:         'circle' | 'square' | 'rounded' | 'pill',
+  status?:        'disabled' | 'pressed' | 'unclickable',
   url:            string,
-  icon?:          string,
-  isInverse:      boolean,
-  isBordered:     boolean,
-  isTransparent:  boolean,
+  isBordered?:    boolean,
+  isTransparent?: boolean,
   onClick:        Function
 };
 
@@ -42,7 +47,7 @@ export default class Button extends Component<Props>{
       name += this.props[key]
         ? typeof(this.props[key]) !== 'boolean'
           ? ' button_' + key + '_' + this.props[key].toString()
-          : ' button_' + key
+          : ' button_' + key.substr(2).toLowerCase()
         : '';
     })
 

@@ -691,6 +691,198 @@ storiesOf('Button', module)
       </div>
     </div>
   )
+  .add('Exmaples', () =>
+    <div style={{display: 'flex', flexWrap: 'nowrap'}}>
+      <div style={{display: 'flex', flexDirection: 'column', width: '250px'}}>
+        <h3>Default</h3>
+        <Button size='100' color='green' label='button'/>
+        <br/>
+        <Button size='100' color='green' label='button' isBordered={true}/>
+        <br/>
+        <Button size='100' color='green' label='button' isTransparent={true}/>
+        <br/>
+        <Button size='100' color='green' label='button' isBordered={true} isTransparent={true}/>
+        <br/>
+        <h3>Rounded</h3>
+        <Button size='100' shape='rounded' color='blue' label='button'/>
+        <br/>
+        <Button size='100' shape='rounded' color='blue' label='button' isBordered={true}/>
+        <br/>
+        <Button size='100' shape='rounded' color='blue' label='button' isTransparent={true}/>
+        <br/>
+        <Button size='100' shape='rounded' color='blue' label='button' isBordered={true} isTransparent={true}/>
+        <br/>
+        <h3>Pill</h3>
+        <Button size='100' shape='pill' color='red' label='button'/>
+        <br/>
+        <Button size='100' shape='pill' color='red' label='button' isBordered={true}/>
+        <br/>
+        <Button size='100' shape='pill' color='red' label='button' isTransparent={true}/>
+        <br/>
+        <Button size='100' shape='pill' color='red' label='button' isBordered={true} isTransparent={true}/>
+        <br/>
+        <h3>Square</h3>
+        <Button size='100' shape='square' color='orange' label='button'/>
+        <br/>
+        <Button size='100' shape='square' color='orange' label='button' isBordered={true}/>
+        <br/>
+        <Button size='100' shape='square' color='orange' label='button' isTransparent={true}/>
+        <br/>
+        <Button size='100' shape='square' color='orange' label='button' isBordered={true} isTransparent={true}/>
+        <br/>
+        <h3>Circle</h3>
+        <Button size='100' shape='circle' color='purple' label='button'/>
+        <br/>
+        <Button size='100' shape='circle' color='purple' label='button' isBordered={true}/>
+        <br/>
+        <Button size='100' shape='circle' color='purple' label='button' isTransparent={true}/>
+        <br/>
+        <Button size='100' shape='circle' color='purple' label='button' isBordered={true} isTransparent={true}/>
+        <br/>
+      </div>
+      <div style={{display: 'flex', flexDirection: 'column', width: '250px'}}>
+        <h3>Pressed</h3>
+        <Button size='100' color='green' label='button' status='pressed' />
+        <br/>
+        <Button size='100' color='green' label='button' isBordered={true} status='pressed' />
+        <br/>
+        <Button size='100' color='green' label='button' isTransparent={true} status='pressed' />
+        <br/>
+        <Button size='100' color='green' label='button' isBordered={true} isTransparent={true} status='pressed' />
+        <br/>
+        <h3>Pressed</h3>
+        <Button size='100' status='pressed' shape='rounded' color='blue' label='button'/>
+        <br/>
+        <Button size='100' status='pressed' shape='rounded' color='blue' label='button' isBordered={true}/>
+        <br/>
+        <Button size='100' status='pressed' shape='rounded' color='blue' label='button' isTransparent={true}/>
+        <br/>
+        <Button size='100' status='pressed' shape='rounded' color='blue' label='button' isBordered={true} isTransparent={true}/>
+        <br/>
+        <h3>Pressed</h3>
+        <Button size='100' status='pressed' shape='pill' color='red' label='button'/>
+        <br/>
+        <Button size='100' status='pressed' shape='pill' color='red' label='button' isBordered={true}/>
+        <br/>
+        <Button size='100' status='pressed' shape='pill' color='red' label='button' isTransparent={true}/>
+        <br/>
+        <Button size='100' status='pressed' shape='pill' color='red' label='button' isBordered={true} isTransparent={true}/>
+        <br/>
+        <h3>Pressed</h3>
+        <Button size='100' status='pressed' shape='square' color='orange' label='button'/>
+        <br/>
+        <Button size='100' status='pressed' shape='square' color='orange' label='button' isBordered={true}/>
+        <br/>
+        <Button size='100' status='pressed' shape='square' color='orange' label='button' isTransparent={true}/>
+        <br/>
+        <Button size='100' status='pressed' shape='square' color='orange' label='button' isBordered={true} isTransparent={true}/>
+        <br/>
+        <h3>Pressed</h3>
+        <Button size='100' status='pressed' shape='circle' color='purple' label='button'/>
+        <br/>
+        <Button size='100' status='pressed' shape='circle' color='purple' label='button' isBordered={true}/>
+        <br/>
+        <Button size='100' status='pressed' shape='circle' color='purple' label='button' isTransparent={true}/>
+        <br/>
+        <Button size='100' status='pressed' shape='circle' color='purple' label='button' isBordered={true} isTransparent={true}/>
+        <br/>
+      </div>
+      <div style={{display: 'flex', flexDirection: 'column', width: '250px'}}>
+        <h3>Unclickable</h3>
+        <Button size='100' color='green' label='button' status='unclickable'/>
+        <br/>
+        <Button size='100' color='green' label='button' isBordered={true} status='unclickable'/>
+        <br/>
+        <Button size='100' color='green' label='button' isTransparent={true} status='unclickable'/>
+        <br/>
+        <Button size='100' color='green' label='button' isBordered={true} isTransparent={true} status='unclickable'/>
+        <br/>
+        <h3>Unclickable</h3>
+        <Button size='100' status='unclickable' shape='rounded' color='blue' label='button'/>
+        <br/>
+        <Button size='100' status='unclickable' shape='rounded' color='blue' label='button' isBordered={true}/>
+        <br/>
+        <Button size='100' status='unclickable' shape='rounded' color='blue' label='button' isTransparent={true}/>
+        <br/>
+        <Button size='100' status='unclickable' shape='rounded' color='blue' label='button' isBordered={true} isTransparent={true}/>
+        <br/>
+        <h3>Unclickable</h3>
+        <Button size='100' status='unclickable' shape='pill' color='red' label='button'/>
+        <br/>
+        <Button size='100' status='unclickable' shape='pill' color='red' label='button' isBordered={true}/>
+        <br/>
+        <Button size='100' status='unclickable' shape='pill' color='red' label='button' isTransparent={true}/>
+        <br/>
+        <Button size='100' status='unclickable' shape='pill' color='red' label='button' isBordered={true} isTransparent={true}/>
+        <br/>
+        <h3>Unclickable</h3>
+        <Button size='100' status='unclickable' shape='square' color='orange' label='button'/>
+        <br/>
+        <Button size='100' status='unclickable' shape='square' color='orange' label='button' isBordered={true}/>
+        <br/>
+        <Button size='100' status='unclickable' shape='square' color='orange' label='button' isTransparent={true}/>
+        <br/>
+        <Button size='100' status='unclickable' shape='square' color='orange' label='button' isBordered={true} isTransparent={true}/>
+        <br/>
+        <h3>Unclickable</h3>
+        <Button size='100' status='unclickable' shape='circle' color='purple' label='button'/>
+        <br/>
+        <Button size='100' status='unclickable' shape='circle' color='purple' label='button' isBordered={true}/>
+        <br/>
+        <Button size='100' status='unclickable' shape='circle' color='purple' label='button' isTransparent={true}/>
+        <br/>
+        <Button size='100' status='unclickable' shape='circle' color='purple' label='button' isBordered={true} isTransparent={true}/>
+        <br/>
+      </div>
+      <div style={{display: 'flex', flexDirection: 'column', width: '250px'}}>
+        <h3>Disabled</h3>
+        <Button size='100' color='green' label='button' status='disabled' />
+        <br/>
+        <Button size='100' color='green' label='button' isBordered={true} status='disabled' />
+        <br/>
+        <Button size='100' color='green' label='button' isTransparent={true} status='disabled' />
+        <br/>
+        <Button size='100' color='green' label='button' isBordered={true} isTransparent={true} status='disabled' />
+        <br/>
+        <h3>Disabled</h3>
+        <Button size='100' status='disabled' shape='rounded' color='blue' label='button'/>
+        <br/>
+        <Button size='100' status='disabled' shape='rounded' color='blue' label='button' isBordered={true}/>
+        <br/>
+        <Button size='100' status='disabled' shape='rounded' color='blue' label='button' isTransparent={true}/>
+        <br/>
+        <Button size='100' status='disabled' shape='rounded' color='blue' label='button' isBordered={true} isTransparent={true}/>
+        <br/>
+        <h3>Disabled</h3>
+        <Button size='100' status='disabled' shape='pill' color='red' label='button'/>
+        <br/>
+        <Button size='100' status='disabled' shape='pill' color='red' label='button' isBordered={true}/>
+        <br/>
+        <Button size='100' status='disabled' shape='pill' color='red' label='button' isTransparent={true}/>
+        <br/>
+        <Button size='100' status='disabled' shape='pill' color='red' label='button' isBordered={true} isTransparent={true}/>
+        <br/>
+        <h3>Disabled</h3>
+        <Button size='100' status='disabled' shape='square' color='orange' label='button'/>
+        <br/>
+        <Button size='100' status='disabled' shape='square' color='orange' label='button' isBordered={true}/>
+        <br/>
+        <Button size='100' status='disabled' shape='square' color='orange' label='button' isTransparent={true}/>
+        <br/>
+        <Button size='100' status='disabled' shape='square' color='orange' label='button' isBordered={true} isTransparent={true}/>
+        <br/>
+        <h3>Disabled</h3>
+        <Button size='100' status='disabled' shape='circle' color='purple' label='button'/>
+        <br/>
+        <Button size='100' status='disabled' shape='circle' color='purple' label='button' isBordered={true}/>
+        <br/>
+        <Button size='100' status='disabled' shape='circle' color='purple' label='button' isTransparent={true}/>
+        <br/>
+        <Button size='100' status='disabled' shape='circle' color='purple' label='button' isBordered={true} isTransparent={true}/>
+        <br/>
+      </div>
+    </div>
+  )
   .add('onClick', () =>
     <div style={{display: 'flex', flexDirection: 'column'}}>
       <div>

@@ -1,0 +1,73 @@
+.icon{
+  width: 70px;
+  height: 70px;
+}
+.icon_color_green{
+  fill: #00C853;
+}
+.icon_color_red{
+  fill: #DD2C00;
+}
+.icon_color_blue{
+  fill: #0288D1;
+}
+.icon_color_orange{
+  fill: #FF9800;
+}
+.icon_color_purple{
+  fill: #8E24AA;
+}
+.icon_color_black{
+  fill: #000;
+}
+.icon_color_white{
+  fill: #fff;
+}
+.icon_color_none{
+  display: none;
+}
+
+.icon_size_20{
+  width: 20px;
+  height: 20px;
+}
+.icon_size_40{
+  width: 40px;
+  height: 40px;
+}
+.icon_size_60{
+  width: 60px;
+  height: 60px;
+}
+.icon_size_80{
+  width: 80px;
+  height: 80px;
+}
+.icon_size_100{
+  width: 100px;
+  height: 100px;
+}
+.icon_size_120{
+  width: 120px;
+  height: 120px;
+}
+.icon_size_140{
+  width: 140px;
+  height: 140px;
+}
+.icon_size_160{
+  width: 160px;
+  height: 160px;
+}
+.icon_size_180{
+  width: 180px;
+  height: 180px;
+}
+.icon_size_200{
+  width: 200px;
+  height: 200px;
+}
+.icon_size_full{
+  width: 100%;
+  height: 100%;
+}

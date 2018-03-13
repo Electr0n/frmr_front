@@ -4,7 +4,7 @@ import Button from './button';
 
 describe('Button', () => {
 
-  let component, instance, action;
+  let component, action;
 
   describe('render', () => {
 

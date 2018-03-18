@@ -1,12 +1,40 @@
 .button_bordered{
   border: solid 1px var(--color_black);
 }
-.button_bordered:hover{
-  border: none;
-  color: none;
-}
 .button_color_black.button_bordered{
   border-color: #fff;
+}
+.button_bordered:hover{
+  background-color: transparent;
+  border-color: var(--color_default);
+  color: var(--color_default);
+}
+[class*='button_color_'].button_bordered:hover{
+  background-color: transparent;
+}
+.button_color_green.button_bordered:hover{
+  border-color: var(--color_green);
+  color: var(--color_green);
+}
+.button_color_blue.button_bordered:hover{
+  border-color: var(--color_blue);
+  color: var(--color_blue);
+}
+.button_color_red.button_bordered:hover{
+  border-color: var(--color_red);
+  color: var(--color_red);
+}
+.button_color_black.button_bordered:hover{
+  border-color: var(--color_black);
+  color: var(--color_black);
+}
+.button_color_purple.button_bordered:hover{
+  border-color: var(--color_purple);
+  color: var(--color_purple);
+}
+.button_color_orange.button_bordered:hover{
+  border-color: var(--color_orange);
+  color: var(--color_orange);
 }
 
 .button_color_green.button_transparent.button_bordered{

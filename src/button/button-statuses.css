@@ -29,6 +29,31 @@
 .button_color_orange.button_status_pressed{
   background-color: var(--color_orange_active);
 }
+.button_status_pressed:hover{
+  background-color: var(--color_default);
+  color: #fff;
+}
+.button_color_green.button_status_pressed:hover{
+  background-color: var(--color_green);
+}
+.button_color_blue.button_status_pressed:hover{
+  background-color: var(--color_blue);
+}
+.button_color_red.button_status_pressed:hover{
+  background-color: var(--color_red);
+}
+.button_color_black.button_status_pressed:hover{
+  background-color: var(--color_black);
+}
+.button_color_purple.button_status_pressed:hover{
+  background-color: var(--color_purple);
+}
+.button_color_orange.button_status_pressed:hover{
+  background-color: var(--color_orange);
+}
+[class*='button_color_'].button_bordered.button_status_pressed:hover{
+  background-color: transparent;
+}
 
 .button_transparent.button_status_pressed{
   color: var(--color_default_active);

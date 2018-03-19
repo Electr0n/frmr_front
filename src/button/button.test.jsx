@@ -84,7 +84,7 @@ describe('Button', () => {
 
   });
 
-  describe('showLabel', () => {
+  describe('showLabel()', () => {
 
     it('should return label', () => {
       component = shallow(<Button label='somestring' />).instance();
@@ -104,6 +104,47 @@ describe('Button', () => {
     it('should return empty result', () => {
       component = shallow(<Button />).instance();
       expect(component.showLabel()).toEqual('');
+    });
+
+  });
+
+  describe('showIcon()', () => {
+
+    it('should return Icon component', () => {
+      component = shallow(<Button icon={{name: 'login', colors: ['red']}} />).instance();
+      expect(component.showIcon().type.name).toEqual('Icon');
+    });
+
+  });
+
+  describe('showContext()', () => {
+
+    it('should return Icon component if icon specified', () => {
+      component = shallow(<Button icon={{name: 'login', colors: ['red']}} />).instance();
+      expect(component.showContext().type.name).toEqual('Icon');
+    });
+
+    it('should return text if text specified', () => {
+      component = shallow(<Button label='test' />).instance();
+      expect(component.showContext()).toEqual('test');
+    });
+
+    it('should return Icon component if both icon and text specified', () => {
+      component = shallow(
+        <Button
+          label='test'
+          icon={{name: 'login', colors: ['red']}}
+        />).instance();
+      expect(component.showContext().type.name).toEqual('Icon');
+    });
+
+    it('shouldn\'t return text if both icon and text specified', () => {
+      component = shallow(
+        <Button
+          label='test'
+          icon={{name: 'login', colors: ['red']}}
+        />).instance();
+      expect(component.showContext()).not.toEqual('Icon');
     });
 
   });

@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { BrowserRouter } from 'react-router-dom';
 import Button from './button';
+import Icon from '../icon/icon';
 
 storiesOf('Button', module)
   .addDecorator(story => (
@@ -12,17 +13,92 @@ storiesOf('Button', module)
       </div>
     </BrowserRouter>
   ))
+  .add('General usage', () =>
+    <div>
+      <b>Available properties: </b>
+      <ul>
+        <li>color</li>
+        <li>label</li>
+        <li>size</li>
+        <li>shape</li>
+        <li>status</li>
+        <li>url</li>
+        <li>isBordered</li>
+        <li>isTransparent</li>
+        <li>icon</li>
+        <li>onClick</li>
+      </ul>
+      <b>Specify "color" to fill button. By default it's grey</b>
+      <p>Available colors:</p>
+      <ul>
+        <li>red</li>
+        <li>green</li>
+        <li>blue</li>
+        <li>purple</li>
+        <li>orange</li>
+        <li>black</li>
+      </ul>
+      <b>Specify "label" to show button label</b>
+      <p>If text overflow button last symbols will be replaced by "..."</p>
+      <p>Text length is limited by 30 symbols</p>
+      <br/>
+      <b>Size</b>
+      <p>Available sizes:</p>
+      <ul>
+        <li>40</li>
+        <li>60</li>
+        <li>80</li>
+        <li>100</li>
+        <li>120</li>
+        <li>140</li>
+        <li>160</li>
+        <li>full</li>
+        <li>auto</li>
+      </ul>
+      <b>Shape</b>
+      <p>Available shapes:</p>
+      <ul>
+        <li>circle</li>
+        <li>square</li>
+        <li>rounded</li>
+        <li>pill</li>
+      </ul>
+      <b>Status</b>
+      <p>Available statuses:</p>
+      <ul>
+        <li>disabled</li>
+        <li>pressed</li>
+        <li>unclickable</li>
+      </ul>
+      <b>Url</b>
+      <p>Will render {"<a>"} if specified external link. For local links will be used react router</p>
+      <b>isBordered</b>
+      <b>true | false</b>
+      <p>Set it true to show button border</p>
+      <b>isTransparent</b>
+      <b>true | false</b>
+      <p>Set it true to make transparent button</p>
+      <b>icon</b>
+      <p>Expect object {"{name: String, colors: Array}"}</p>
+      <p>To find available options check Icon component</p>
+      <b>onClick</b>
+      <p>expect function</p>
+    </div>
+  )
   .add('with text', () => 
     <div style={{display: 'flex', flexDirection: 'column'}}>
       <h3>Without text</h3>
       <p>{"<Button />"}</p>
       <Button />
       <h3>With text length less than 30 symbols</h3>
-      <p>{"<Button label='Some text here' />"}</p>
-      <Button label='Some text here' />
-      <h3>With text length more than 30 symbols</h3>
+      <p>{"<Button label='Some text' />"}</p>
+      <Button label='Some text' />
+      <h3>With too long text</h3>
       <p>{"<Button label='This text is too loooooooooooooooooooooooong' />"}</p>
       <Button label='This text is too loooooooooooooooooooooooong' />
+      <h3>With text length more than 30 symbols</h3>
+      <p>{"<Button size='auto' label='This text is too loooooooooooooooooooooooong' />"}</p>
+      <Button size='auto' label='This text is too loooooooooooooooooooooooong' />
     </div>
   )
   .add('with url', () => 
@@ -691,12 +767,212 @@ storiesOf('Button', module)
       </div>
     </div>
   )
+  .add('Exmaples', () =>
+    <div style={{display: 'flex', flexWrap: 'nowrap'}}>
+      <div style={{display: 'flex', flexDirection: 'column', width: '250px'}}>
+        <h3>Default</h3>
+        <Button size='100' color='green' label='button'/>
+        <br/>
+        <Button size='100' color='green' label='button' isBordered={true}/>
+        <br/>
+        <Button size='100' color='green' label='button' isTransparent={true}/>
+        <br/>
+        <Button size='100' color='green' label='button' isBordered={true} isTransparent={true}/>
+        <br/>
+        <h3>Rounded</h3>
+        <Button size='100' shape='rounded' color='blue' label='button'/>
+        <br/>
+        <Button size='100' shape='rounded' color='blue' label='button' isBordered={true}/>
+        <br/>
+        <Button size='100' shape='rounded' color='blue' label='button' isTransparent={true}/>
+        <br/>
+        <Button size='100' shape='rounded' color='blue' label='button' isBordered={true} isTransparent={true}/>
+        <br/>
+        <h3>Pill</h3>
+        <Button size='100' shape='pill' color='red' label='button'/>
+        <br/>
+        <Button size='100' shape='pill' color='red' label='button' isBordered={true}/>
+        <br/>
+        <Button size='100' shape='pill' color='red' label='button' isTransparent={true}/>
+        <br/>
+        <Button size='100' shape='pill' color='red' label='button' isBordered={true} isTransparent={true}/>
+        <br/>
+        <h3>Square</h3>
+        <Button size='100' shape='square' color='orange' label='button'/>
+        <br/>
+        <Button size='100' shape='square' color='orange' label='button' isBordered={true}/>
+        <br/>
+        <Button size='100' shape='square' color='orange' label='button' isTransparent={true}/>
+        <br/>
+        <Button size='100' shape='square' color='orange' label='button' isBordered={true} isTransparent={true}/>
+        <br/>
+        <h3>Circle</h3>
+        <Button size='100' shape='circle' color='purple' label='button'/>
+        <br/>
+        <Button size='100' shape='circle' color='purple' label='button' isBordered={true}/>
+        <br/>
+        <Button size='100' shape='circle' color='purple' label='button' isTransparent={true}/>
+        <br/>
+        <Button size='100' shape='circle' color='purple' label='button' isBordered={true} isTransparent={true}/>
+        <br/>
+      </div>
+      <div style={{display: 'flex', flexDirection: 'column', width: '250px'}}>
+        <h3>Pressed</h3>
+        <Button size='100' color='green' label='button' status='pressed' />
+        <br/>
+        <Button size='100' color='green' label='button' isBordered={true} status='pressed' />
+        <br/>
+        <Button size='100' color='green' label='button' isTransparent={true} status='pressed' />
+        <br/>
+        <Button size='100' color='green' label='button' isBordered={true} isTransparent={true} status='pressed' />
+        <br/>
+        <h3>Pressed</h3>
+        <Button size='100' status='pressed' shape='rounded' color='blue' label='button'/>
+        <br/>
+        <Button size='100' status='pressed' shape='rounded' color='blue' label='button' isBordered={true}/>
+        <br/>
+        <Button size='100' status='pressed' shape='rounded' color='blue' label='button' isTransparent={true}/>
+        <br/>
+        <Button size='100' status='pressed' shape='rounded' color='blue' label='button' isBordered={true} isTransparent={true}/>
+        <br/>
+        <h3>Pressed</h3>
+        <Button size='100' status='pressed' shape='pill' color='red' label='button'/>
+        <br/>
+        <Button size='100' status='pressed' shape='pill' color='red' label='button' isBordered={true}/>
+        <br/>
+        <Button size='100' status='pressed' shape='pill' color='red' label='button' isTransparent={true}/>
+        <br/>
+        <Button size='100' status='pressed' shape='pill' color='red' label='button' isBordered={true} isTransparent={true}/>
+        <br/>
+        <h3>Pressed</h3>
+        <Button size='100' status='pressed' shape='square' color='orange' label='button'/>
+        <br/>
+        <Button size='100' status='pressed' shape='square' color='orange' label='button' isBordered={true}/>
+        <br/>
+        <Button size='100' status='pressed' shape='square' color='orange' label='button' isTransparent={true}/>
+        <br/>
+        <Button size='100' status='pressed' shape='square' color='orange' label='button' isBordered={true} isTransparent={true}/>
+        <br/>
+        <h3>Pressed</h3>
+        <Button size='100' status='pressed' shape='circle' color='purple' label='button'/>
+        <br/>
+        <Button size='100' status='pressed' shape='circle' color='purple' label='button' isBordered={true}/>
+        <br/>
+        <Button size='100' status='pressed' shape='circle' color='purple' label='button' isTransparent={true}/>
+        <br/>
+        <Button size='100' status='pressed' shape='circle' color='purple' label='button' isBordered={true} isTransparent={true}/>
+        <br/>
+      </div>
+      <div style={{display: 'flex', flexDirection: 'column', width: '250px'}}>
+        <h3>Unclickable</h3>
+        <Button size='100' color='green' label='button' status='unclickable'/>
+        <br/>
+        <Button size='100' color='green' label='button' isBordered={true} status='unclickable'/>
+        <br/>
+        <Button size='100' color='green' label='button' isTransparent={true} status='unclickable'/>
+        <br/>
+        <Button size='100' color='green' label='button' isBordered={true} isTransparent={true} status='unclickable'/>
+        <br/>
+        <h3>Unclickable</h3>
+        <Button size='100' status='unclickable' shape='rounded' color='blue' label='button'/>
+        <br/>
+        <Button size='100' status='unclickable' shape='rounded' color='blue' label='button' isBordered={true}/>
+        <br/>
+        <Button size='100' status='unclickable' shape='rounded' color='blue' label='button' isTransparent={true}/>
+        <br/>
+        <Button size='100' status='unclickable' shape='rounded' color='blue' label='button' isBordered={true} isTransparent={true}/>
+        <br/>
+        <h3>Unclickable</h3>
+        <Button size='100' status='unclickable' shape='pill' color='red' label='button'/>
+        <br/>
+        <Button size='100' status='unclickable' shape='pill' color='red' label='button' isBordered={true}/>
+        <br/>
+        <Button size='100' status='unclickable' shape='pill' color='red' label='button' isTransparent={true}/>
+        <br/>
+        <Button size='100' status='unclickable' shape='pill' color='red' label='button' isBordered={true} isTransparent={true}/>
+        <br/>
+        <h3>Unclickable</h3>
+        <Button size='100' status='unclickable' shape='square' color='orange' label='button'/>
+        <br/>
+        <Button size='100' status='unclickable' shape='square' color='orange' label='button' isBordered={true}/>
+        <br/>
+        <Button size='100' status='unclickable' shape='square' color='orange' label='button' isTransparent={true}/>
+        <br/>
+        <Button size='100' status='unclickable' shape='square' color='orange' label='button' isBordered={true} isTransparent={true}/>
+        <br/>
+        <h3>Unclickable</h3>
+        <Button size='100' status='unclickable' shape='circle' color='purple' label='button'/>
+        <br/>
+        <Button size='100' status='unclickable' shape='circle' color='purple' label='button' isBordered={true}/>
+        <br/>
+        <Button size='100' status='unclickable' shape='circle' color='purple' label='button' isTransparent={true}/>
+        <br/>
+        <Button size='100' status='unclickable' shape='circle' color='purple' label='button' isBordered={true} isTransparent={true}/>
+        <br/>
+      </div>
+      <div style={{display: 'flex', flexDirection: 'column', width: '250px'}}>
+        <h3>Disabled</h3>
+        <Button size='100' color='green' label='button' status='disabled' />
+        <br/>
+        <Button size='100' color='green' label='button' isBordered={true} status='disabled' />
+        <br/>
+        <Button size='100' color='green' label='button' isTransparent={true} status='disabled' />
+        <br/>
+        <Button size='100' color='green' label='button' isBordered={true} isTransparent={true} status='disabled' />
+        <br/>
+        <h3>Disabled</h3>
+        <Button size='100' status='disabled' shape='rounded' color='blue' label='button'/>
+        <br/>
+        <Button size='100' status='disabled' shape='rounded' color='blue' label='button' isBordered={true}/>
+        <br/>
+        <Button size='100' status='disabled' shape='rounded' color='blue' label='button' isTransparent={true}/>
+        <br/>
+        <Button size='100' status='disabled' shape='rounded' color='blue' label='button' isBordered={true} isTransparent={true}/>
+        <br/>
+        <h3>Disabled</h3>
+        <Button size='100' status='disabled' shape='pill' color='red' label='button'/>
+        <br/>
+        <Button size='100' status='disabled' shape='pill' color='red' label='button' isBordered={true}/>
+        <br/>
+        <Button size='100' status='disabled' shape='pill' color='red' label='button' isTransparent={true}/>
+        <br/>
+        <Button size='100' status='disabled' shape='pill' color='red' label='button' isBordered={true} isTransparent={true}/>
+        <br/>
+        <h3>Disabled</h3>
+        <Button size='100' status='disabled' shape='square' color='orange' label='button'/>
+        <br/>
+        <Button size='100' status='disabled' shape='square' color='orange' label='button' isBordered={true}/>
+        <br/>
+        <Button size='100' status='disabled' shape='square' color='orange' label='button' isTransparent={true}/>
+        <br/>
+        <Button size='100' status='disabled' shape='square' color='orange' label='button' isBordered={true} isTransparent={true}/>
+        <br/>
+        <h3>Disabled</h3>
+        <Button size='100' status='disabled' shape='circle' color='purple' label='button'/>
+        <br/>
+        <Button size='100' status='disabled' shape='circle' color='purple' label='button' isBordered={true}/>
+        <br/>
+        <Button size='100' status='disabled' shape='circle' color='purple' label='button' isTransparent={true}/>
+        <br/>
+        <Button size='100' status='disabled' shape='circle' color='purple' label='button' isBordered={true} isTransparent={true}/>
+        <br/>
+      </div>
+    </div>
+  )
   .add('onClick', () =>
     <div style={{display: 'flex', flexDirection: 'column'}}>
       <div>
         <h3>onClick</h3>
         <p>{"<Button label='click me' onClick={action('I was pressed')} />"}</p>
         <Button label='click me' onClick={action('I was pressed')} />
+      </div>
+    </div>
+  ).add('with icons', () =>
+    <div style={{display: 'flex', flexDirection: 'column'}}>
+      <div>
+        <h3>login</h3>
+        <p>{"<Button />"}</p>
+        <Button color='red' icon={{name: 'login'}}></Button>
       </div>
     </div>
   )

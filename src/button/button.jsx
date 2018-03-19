@@ -1,6 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Icon from '../icon/icon';
 import './button.css';
 import './button-sizes.css';
 import './button-shapes.css';
@@ -18,6 +19,7 @@ type Props = {
   url:            string,
   isBordered?:    boolean,
   isTransparent?: boolean,
+  icon?:          Object,
   onClick:        Function
 };
 
@@ -54,7 +56,7 @@ export default class Button extends Component<Props>{
     return name;
   }
 
-  showLabel()/*: ?string*/{
+  showLabel()/*: string*/{
     return !this.props.label
       ? ''
       : this.props.label.length > 30
@@ -62,11 +64,20 @@ export default class Button extends Component<Props>{
         : this.props.label;
   }
 
+  showIcon()/*: React$Element<typeof Icon>*/{
+    let { name, colors } = this.props.icon || { name: '', colors: []};
+    return <Icon name={name} colors={colors} />
+  }
+
+  showContext()/*: React$Element<typeof Icon> | string*/{
+    return this.props.icon ? this.showIcon() : this.showLabel();
+  }
+
   renderButton()/*: React$Element<'button'>*/{
     return  <button
               className={this.className()}
               onClick={e => this.handleClick(e)}>
-              {this.showLabel()}
+              {this.showContext()}
             </button>
   }
 
@@ -75,12 +86,12 @@ export default class Button extends Component<Props>{
       ? <a href={this.props.url}
           className={this.className()}
           onClick={e => this.handleClick(e)}>
-          {this.showLabel()}
+          {this.showContext()}
         </a>
       : <Link to={this.props.url}
           className={this.className()}
           onClick={e => this.handleClick(e)}>
-          {this.showLabel()}
+          {this.showContext()}
         </Link>
   }
 
